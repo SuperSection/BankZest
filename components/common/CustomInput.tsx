@@ -10,8 +10,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { authFormSchema } from "@/lib/schemas/auth.schema";
 
+
 const formSchema = authFormSchema("sign-up");
 type formType = z.infer<typeof formSchema>;
+
 
 type CustomInputProps = {
   formControl: Control<formType>;
@@ -19,6 +21,7 @@ type CustomInputProps = {
   label: string;
   placeholder: string;
 };
+
 
 const CustomInput = ({
   formControl,
@@ -49,5 +52,6 @@ const CustomInput = ({
     />
   );
 };
+
 
 export default CustomInput;
